@@ -1,0 +1,35 @@
+.fondo1{
+    background-image: url("../IMG/computadora.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+/**/
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+  }
+  
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;
+  }
+  
+  .jumbotron hr {
+    border-top: 2px solid #343a40;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .d-item{
+    height: 500px;
+  }
+  .d-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }

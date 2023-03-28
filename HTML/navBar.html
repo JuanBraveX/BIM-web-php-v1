@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #141A43;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">
+            <img id='logobim' class='logobim' src='IMG/Logo BIM.png' height="40">
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="index.php">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="qSomos.php">QUIÉNES SOMOS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-white dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">QUÉ HACEMOS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="qHacemos.php">Qué Hacemos</a></li>
+                        <li><a class="dropdown-item" href="BIMS.php">BIM Studio</a></li>
+                        <li><a class="dropdown-item" href="BIMA.php">BIM Analytics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-white dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">QUÉ OFRECEMOS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="qOfrecemos.php">Que ofrecemos</a></li>
+                        <li><a class="dropdown-item" href="#">BIMER</a></li>
+                        <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+                        <li><a class="dropdown-item" href="consultoria.php">Consultoría</a></li>
+                        <li><a class="dropdown-item" href="conocenos.php">Desarrollo Tecnología</a></li>
+                        <li><a class="dropdown-item" href="pVideoGrafica.php">Producción Videográfica</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-white dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">CONTACTO</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contacto.php">Contacto</a></li>
+                        <li><a class="dropdown-item" href="empleate.php">Empleate</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">VCARD</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            //To minimise the height of chatbox
+            $(document).ready(function () {
+                window.addEventListener('dfMessengerLoaded', function (event) {
+                    $r1 = document.querySelector("df-messenger");
+                    $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+                    $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+                    var sheet = new CSSStyleSheet;
+                    // manage box height from here
+                    sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: 450px }`);
+                    $r2.shadowRoot.adoptedStyleSheets = [sheet];
+                });
+            });
+        </script>
+
+        <df-messenger intent="WELCOME" chat-title="BIMO" agent-id="e0ef6cef-b7bb-4f73-8e17-1c14fdaa09e4"
+            language-code="es" chat-icon="IMG/Bimo.ico"></df-messenger>
+        <style scope="df-messenger">
+            df-messenger {
+                --df-messenger-button-titlebar-color: #141A43;
+            }
+        </style>
